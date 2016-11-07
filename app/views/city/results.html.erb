@@ -1,0 +1,8 @@
+<h1>Results page</h1>
+<p>
+  THE CURRENT WEATHER IN <%=params[:city].upcase%> (<%= @country_code%>) IS:
+
+  TEMP: <%= @weather_temp_current %> °C AND IT LOOKS LIKE: <%= @weather_description%>
+</p>
+
+<%= image_tag @giphy %>
