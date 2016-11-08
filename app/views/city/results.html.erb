@@ -1,8 +1,47 @@
-<h1>Results page</h1>
-<p>
-  THE CURRENT WEATHER IN <%=params[:city].upcase%> (<%= @country_code%>) IS:
+<h1 class="lead text-center">Giphy the Funniest weather in the world!</h1>
+<div class="container-fluid center-container">
+  <% if @is_not_found %>
+    <div class="col-md-8" style="width: 100%;">
+      <p class="lead text-center">
+        <%= @not_found%>
+      </p>
+      <%= form_tag city_results_path, method: "post", class: ' col-md-offset-3 col-md-6 text-center text-center' do %>
+          <div class="form-group">
+            <%= label_tag :city, 'City', class: "lead no-margin"%><br>
+            <%= text_field_tag :city , '', class: "form-control" %>
+          </div>
+          <%= submit_tag "Get Weather", class: 'btn btn-success btn-lg' %>
+        </p>
+      <% end %>
+    </div>
+    <% else %>
+    <div class="col-md-12 flex-container">
+      <div class="col-md-6">
+        <div class="climate">
+          <p class="weather-info">
+            The current weather in
+            <strong><%=@city.upcase%></strong> (<%= @country_code %>) is:
+            <strong><%= @weather_temp_current %> °C </strong>
+            and it looks like <span class="weather-desc"><%= @weather_description.humanize%></span>
+          </p>
 
-  TEMP: <%= @weather_temp_current %> °C AND IT LOOKS LIKE: <%= @weather_description%>
-</p>
+          <%= form_tag city_results_path, method: "post", class: 'col-md-6 text-center' do %>
+              <div class="form-group">
+                <%= label_tag :city, 'City', class: "lead no-margin"%><br>
+                <%= text_field_tag :city , '', class: "form-control" %>
+              </div>
+              <%= submit_tag "Get Weather", class: 'btn btn-success btn-lg' %>
+            </p>
+          <% end %>
 
-<%= image_tag @giphy %>
+        </div>
+
+      </div>
+      <div class="col-md-6">
+        <div class="gif_image">
+          <img src="<%= @giphy %>" class='img-responsive img-thumbnail' alt="giphy" />
+        </div>
+      </div>
+    </div>
+    <% end %>
+</div>

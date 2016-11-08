@@ -1,10 +1,11 @@
-<h1>Funny Weather</h1>
-<%= form_tag city_results_path do %>
-  <p>
-    <%= label_tag :city %><br>
-    <%= text_field_tag :city %>
-  </p>
+<h1 class="lead weather-title">Funny Weather</h1>
+<%= form_tag city_results_path, method: "post", class: 'col-md-6 text-center' do %>
+    <div class="form-group">
+      <%= label_tag :city, 'City', class: "lead no-margin"%><br>
+      <%= text_field_tag :city , '', class: "form-control" %>
+    </div>
 
-    <%= submit_tag "get weather" %>
+
+    <%= submit_tag "Get Weather", class: 'btn btn-success btn-lg' %>
   </p>
 <% end %>

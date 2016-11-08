@@ -13,3 +13,46 @@
  *= require_tree .
  *= require_self
  */
+
+ html, body {
+   height: 100%;
+ }
+
+.no-margin {
+  margin: 0;
+}
+.weather-title{
+  color: white;
+  font-size: 36px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  background: tomato;
+}
+
+.weather-info {
+  font-size: 28px;
+}
+.weather-desc {
+  font-weight: bold;
+}
+.city.input {
+  background: url("http://phandroid.s3.amazonaws.com/wp-content/uploads/2014/06/bg_weather_sunny_day.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
