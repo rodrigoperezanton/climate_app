@@ -1,11 +1,14 @@
-<h1 class="lead weather-title">Funny Weather</h1>
-<%= form_tag city_results_path, method: "post", class: 'col-md-6 text-center' do %>
+<h1 class="lead weather-title level2"><strong>Funny Weather</strong></h1>
+<%= form_tag city_results_path, method: "post", class: 'col-md-6 text-center level2' do %>
     <div class="form-group">
-      <%= label_tag :city, 'City', class: "lead no-margin"%><br>
-      <%= text_field_tag :city , '', class: "form-control" %>
+      <%= label_tag :city, 'City', class: "lead no-margin level2" %><br>
+      <%= text_field_tag :city , '', class: "form-control level2" %>
     </div>
 
 
-    <%= submit_tag "Get Weather", class: 'btn btn-success btn-lg' %>
+    <%= submit_tag "Get Weather", class: 'btn btn-success btn-lg level2' %>
   </p>
 <% end %>
+<div id="video-background">
+<%= video_tag "App_background.mp4", autoplay:true, height: "100%", width: "100%", loop: true%>
+</div>

@@ -37,7 +37,7 @@
   align-items: center;
   flex-direction: column;
   height: 100%;
-  background: tomato;
+  background: #E8E8E8;
 }
 
 .weather-info {
@@ -47,7 +47,7 @@
   font-weight: bold;
 }
 .city.input {
-  background: url("http://phandroid.s3.amazonaws.com/wp-content/uploads/2014/06/bg_weather_sunny_day.jpg");
+  /*background: url("http://phandroid.s3.amazonaws.com/wp-content/uploads/2014/06/bg_weather_sunny_day.jpg");*/
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -55,4 +55,24 @@
   align-items: center;
   flex-direction: column;
   height: 100%;
+}
+
+#video-background {
+position: absolute;
+display: block;
+right: 0;
+bottom: 0;
+min-width: 100%;
+min-height: 100%;
+width: initial;
+height: auto;
+z-index: 1;
+margin: 0 auto;
+object-fit: cover;
+padding: 0;
+}
+
+.level2 {
+  position: relative;
+  z-index: 2;
 }
